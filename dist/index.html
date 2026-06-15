@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Ehsan Khatiban — AI / ML Engineer</title>
+    <meta
+      name="description"
+      content="Ehsan Khatiban — AI / ML Engineer based in Linz, Austria. Deep learning, reinforcement learning and software engineering."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400;0,6..72,400&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-N5kKcwEX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-cFPW8wfD.css">
+  </head>
+  <body>
+    <!-- ===== Preloader ===== -->
+    <div class="preloader" id="preloader">
+      <div class="preloader__inner">
+        <div class="preloader__mark">
+          <span data-pl-line>EHSAN</span>
+          <span data-pl-line>KHATIBAN</span>
+        </div>
+        <div class="preloader__meta">
+          <span class="preloader__role">AI / ML ENGINEER</span>
+          <span class="preloader__count"><i id="pl-count">0</i>%</span>
+        </div>
+        <div class="preloader__bar"><i id="pl-bar"></i></div>
+      </div>
+    </div>
+
+    <!-- ===== Background layers ===== -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <canvas id="webgl" aria-hidden="true"></canvas>
+    <div class="bg-grain" aria-hidden="true"></div>
+    <div class="bg-vignette" aria-hidden="true"></div>
+
+    <!-- ===== Fixed UI ===== -->
+    <header class="hud" id="hud">
+      <a class="brand" href="#home" aria-label="Ehsan Khatiban — home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32">
+            <g fill="currentColor">
+              <rect x="2" y="2" width="9" height="9" rx="1.5" />
+              <rect x="21" y="2" width="9" height="9" rx="1.5" opacity="0.45" />
+              <rect x="11.5" y="11.5" width="9" height="9" rx="1.5" />
+              <rect x="2" y="21" width="9" height="9" rx="1.5" opacity="0.45" />
+              <rect x="21" y="21" width="9" height="9" rx="1.5" />
+            </g>
+          </svg>
+        </span>
+        <span class="brand__txt">
+          <b>EHSAN</b>
+          <b>KHATIBAN</b>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary"></nav>
+
+      <div class="hud__right">
+        <button class="hud__sound" id="sound" type="button" aria-label="Toggle ambient sound" aria-pressed="false">
+          <span class="hud__sound-bars"><i></i><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </header>
+
+    <a class="badge" id="badge" href="#contact" aria-label="Open to work">
+      <span class="badge__dot"></span>
+      <span class="badge__txt">OPEN&nbsp;TO&nbsp;WORK</span>
+    </a>
+
+    <div class="foot">
+      <div class="foot__scroll" id="scrollHint">
+        <span>SCROLL TO EXPLORE</span>
+        <i class="foot__scroll-line"></i>
+      </div>
+      <a class="foot__mail" href="mailto:Khatibanehsan@gmail.com">EMAIL ME</a>
+    </div>
+
+    <div class="cursor" id="cursor"><i></i></div>
+
+    <!-- ===== Scroll content ===== -->
+    <main class="content" id="content">
+      <!-- 001 — HOME -->
+      <section class="panel panel--home" id="home" data-section="0">
+        <div class="hero">
+          <div class="hero__words" id="heroWords" aria-hidden="true"></div>
+          <svg class="hero__links" id="heroLinks" aria-hidden="true"></svg>
+          <h1 class="hero__title">
+            <span class="hero__title-line" data-reveal>EHSAN</span>
+            <span class="hero__title-line" data-reveal>KHATIBAN</span>
+          </h1>
+          <p class="hero__role" data-reveal>AI / ML ENGINEER · LINZ</p>
+        </div>
+      </section>
+
+      <!-- 002 — ABOUT -->
+      <section class="panel panel--about" id="about" data-section="1">
+        <div class="wrap">
+          <span class="kicker">002 / ABOUT</span>
+          <h2 class="lead" id="aboutHeading"></h2>
+          <div class="about__grid">
+            <div class="about__body" id="aboutBody"></div>
+            <div class="about__facts" id="aboutFacts"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 003 — SKILLS -->
+      <section class="panel panel--skills" id="skills" data-section="2">
+        <div class="wrap">
+          <span class="kicker">003 / SKILLS</span>
+          <h2 class="lead">An engineer's toolkit, an AI mind.</h2>
+          <div class="skills__grid" id="skillsGrid"></div>
+        </div>
+      </section>
+
+      <!-- 004 — WORK -->
+      <section class="panel panel--work" id="work" data-section="3">
+        <div class="wrap">
+          <span class="kicker">004 / WORK</span>
+          <h2 class="lead">Six years shipping software.</h2>
+          <div class="work__list" id="workList"></div>
+        </div>
+      </section>
+
+      <!-- 005 — PROJECTS -->
+      <section class="panel panel--projects" id="projects" data-section="4">
+        <div class="wrap">
+          <span class="kicker">005 / PROJECTS</span>
+          <h2 class="lead">Selected AI research &amp; builds.</h2>
+          <div class="projects__grid" id="projectsGrid"></div>
+        </div>
+      </section>
+
+      <!-- 006 — CONTACT -->
+      <section class="panel panel--contact" id="contact" data-section="5">
+        <div class="wrap wrap--center">
+          <span class="kicker">006 / CONTACT</span>
+          <h2 class="contact__title" id="contactHeading"></h2>
+          <p class="contact__body" id="contactBody"></p>
+          <div class="contact__links" id="contactLinks"></div>
+          <div class="contact__foot">
+            <span>© <i id="year"></i> Ehsan Khatiban</span>
+            <span>Designed &amp; built with Three.js · GSAP</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
