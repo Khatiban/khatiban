@@ -1,0 +1,12 @@
+node_modules
+dist
+*.log
+.DS_Store
+cv1.txt
+cv2.txt
+
+# Personal CV PDFs — contain phone, home address & DOB. Keep out of a public repo.
+*.pdf
+
+# Stray unrelated folder found in this directory (another project's packages)
+New folder/
