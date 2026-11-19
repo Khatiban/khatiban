@@ -1,63 +1,73 @@
-# Ehsan Khatiban — Portfolio
+# Hi, I'm Ehsan Khatiban 👋
 
-An interactive, scroll-driven portfolio inspired by [Synapser Studio](https://www.synapserstudio.com/),
-themed around the **neural-network / synapse** idea — fitting for an AI / ML engineer.
+**Software developer turned AI/ML engineer** · MSc Artificial Intelligence student at Johannes Kepler University (JKU) Linz, Austria
 
-Built with **Three.js** (WebGL scene, glowing camera path, selective bloom) and
-**GSAP + ScrollTrigger** (scroll choreography, reveals, hero intro).
+[![Portfolio](https://img.shields.io/badge/Portfolio-khatiban.vercel.app-000000?style=flat&logo=vercel&logoColor=white)](https://khatiban.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ehsankhatiban-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ehsankhatiban/)
+[![Email](https://img.shields.io/badge/Email-khatibanehsan%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:khatibanehsan@gmail.com)
 
-## The experience
+---
 
-- A giant `EHSAN KHATIBAN` wordmark with radiating italic keywords connected by hairlines — the "synapse map".
-- A 3D neural field of nodes + links behind everything, rendered on a fixed canvas.
-- A **glowing path** the camera flies along as you scroll; a comet head leads the way and the scene
-  shifts section to section (warm → cool glow), with HDR bloom for the glow.
-- Six sections: `Home · About · Skills · Work · Projects · Contact`, all driven from one data file.
-- Custom cursor, numbered nav, "Open to work" badge, generated ambient-sound toggle, robust preloader.
+## About me
 
-## Run it
+- 🎓 Studying for a **Master's in Artificial Intelligence** at JKU Linz (since March 2024)
+- 💼 Three years of production software development: **IPTV platforms for Smart TVs** and **mobile applications**
+- 🧠 Hands-on ML work with **Transformers, xLSTM, deep reinforcement learning (DQN/PPO)** and **QSAR modeling**
+- 🎯 Looking for an **applied AI engineering role** where software engineering meets machine learning in production
+- 📍 Based in Linz, Austria · 🌍 English · German (A2 to B1)
 
-```bash
-npm install      # already done
-npm run dev      # dev server with hot reload -> http://localhost:5173
-npm run build    # production build -> dist/
-npm run preview  # preview the production build -> http://localhost:4173
-```
+## Tech stack
 
-## Editing your content
+**ML and data**
 
-Everything you'd want to change lives in **`src/data/content.js`**:
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
+![NLTK](https://img.shields.io/badge/NLTK-154F5B?style=flat)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
-- `profile` — name, role, email, LinkedIn, GitHub.
-- `heroWords` — the floating keywords (each with `x`/`y` as viewport %).
-- `about`, `skills`, `experience` (incl. linked GitHub `repos`), `projects`, `contact`.
+**Software engineering**
 
-Visual tuning lives in **`src/scene/SynapseScene.js`** (`CONFIG` at the top): glow colours,
-node count, bloom strength/threshold, and the camera `WAYPOINTS`.
-Theme colours and typography are CSS variables at the top of **`src/style.css`**.
+![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=openjdk&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logo=dotnet&logoColor=white)
+![ASP.NET](https://img.shields.io/badge/ASP.NET-512BD4?style=flat&logo=dotnet&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![GitLab](https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=gitlab&logoColor=white)
 
-## Structure
+## Featured projects
 
-```
-index.html                  markup shell + fixed UI
-src/
-  main.js                   boot: scene + content + scroll + preloader
-  style.css                 all styling (sage / grain / grid aesthetic)
-  data/content.js           ← all your content
-  scene/SynapseScene.js     Three.js scene, glowing path, bloom
-  scroll/scrollController.js GSAP ScrollTrigger choreography
-  ui/interface.js           builds sections, hero links, cursor, sound
-```
+### 🎮 Deep Reinforcement Learning Agent (Doom environment)
+An RL agent that plays a Doom-based environment from visual input with a discrete action space. I implemented and improved DQN and PPO baselines, encoded 128x128 game frames with neural-network visual encoders, and evaluated the agent against AI opponents.
 
-## Deploying
+### 🧪 QSAR Modeling for Bioactivity Prediction
+A model that predicts molecular bioactivity and toxicity from chemical structure (SMILES). I collected and integrated bioactivity data from PubChem and ChEMBL, cleaned large bioassay datasets, and ran exploratory analysis on molecular distributions.
 
-The build output in `dist/` is fully static — drop it on **Netlify**, **Vercel**, **Cloudflare Pages**
-or **GitHub Pages**. With Vercel/Netlify you can point them at this repo and they'll run
-`npm run build` and serve `dist/` automatically.
+### 🧬 xLSTM Architecture Implementation and Analysis
+Implementations of the sLSTM (scalar memory) and mLSTM (matrix memory) variants of xLSTM, with an analysis of how they differ from and perform against standard LSTMs.
 
-## Notes
+### 🔤 Transformer Architecture Study
+A small Transformer language model (GELU, dropout, `nn.Embedding` for token and positional representations) compared against an LSTM to evaluate attention-based vs sequential modeling.
 
-- The design is intentionally typographic (no photo required, like the reference). If you want a
-  portrait in the About section, drop your own image in `public/` and reference it — I did **not**
-  insert a stock photo of a stranger.
-- Fonts load from Google Fonts (Archivo, Newsreader, Space Mono) with system fallbacks.
+## Experience
+
+| Role | Company | Period |
+|------|---------|--------|
+| Software Developer | Amvaj Gostar Novin: scalable IPTV platform for Smart TVs (hotel and residential) | Jul 2021 to Jan 2024 |
+| Application Developer | Dehnad: mobile apps (30Day, Dambel, Tahchin) | Jan 2018 to Jun 2020 |
+| Application Developer | Freelance: 9+ client projects across web and mobile | Jun 2018 to Jan 2019 |
+
+## Education
+
+- **MSc Artificial Intelligence**, Johannes Kepler University Linz, Austria (2024 to present)
+- **MSc IT E-commerce**, Azad University (2022 to 2024)
+- **BSc Civil Engineering Technology**, Municipality University of Applied Sciences & Technology (2018 to 2021)
+
+---
+
+💬 Open to **Junior AI/ML Engineer** roles, **Master thesis** topics in AI, and **working student** positions. See more at **[khatiban.vercel.app](https://khatiban.vercel.app/)**.
